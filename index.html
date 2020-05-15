@@ -1,122 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
-    </style>
-    <link href="css/index.css" rel="stylesheet">
+    <title>yourname.</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
-    <nav id="topnav">
-        <a href="index.html" class="logo">
-            <img id="whitelogo" src="img/nightlogo.png">
-            <img id="blacklogo" src="img/logo.png">
-        </a>
-
-
-            <input type="checkbox" id="switch" /><label for="switch">Toggle</label>
-
-        <div>
-            <!-- <a href="#">LOGIN</a> -->
-            <!-- <a href="#">SIGN UP</a> -->
-            <a href="about.html">ABOUT</a>
-            <a href="#">GET STARTED</a>
-        </div>
-    </nav>
-
-    <div id="container">
-
-    <div class="one">
-        <div class="image-back">
-            
-        <h1>Listen</br>Without Limits</h1>
-        <!-- <h2>Discover New Music</h2> -->
-
-        </div>
-
+    <div id="loading">
+        <div id="spinner"></div>
     </div>
-
-    <div class="two">
-        <div class="box">
-            <h3 class="mobile">Enjoy</br>Your</br>Songs All</br>In One</br>Place.</h3>
-            <p class="mobile">No more having</br>to switch back</br>and forth</br>between</br>applications.</br>Listen to the</br>mainstream and</br>underground all</br>in one place.</p>
-            <h3 class="tablet">Enjoy Your Songs All</br>In One Place.</h3>
-            <p class="tablet">No more having to switch</br>back and forth between</br>applications. Listen to the</br>mainstream and</br>underground all in one</br>place.</p>
-            
-            <img class="mobile" src="img/Group 1.png">
-            <img class="mobile" src="img/Group 2.png">
-            <img class="tablet" src="img/Group 3.png">
-            <img class="tablet" src="img/Group 4.png">
-        </div>
-        <div class="box">
-            <h3 class="mobile b">Find new</br>music</br>literally,</br>however</br>your</br>feeling.</h3>
-            <p class="mobile">Easily find a</br>song or playlist</br>just for your</br>mood your in</br>with our easy</br>tag system. Find</br>songs by their</br>specific qualities</br>wether it be</br>the BPM, Tempre, or</br>dancability.</p>
-            <h3 class="tablet b">Find new music</br>literally, however</br>your feeling.</h3>
-            <p class="tablet">Easily find a song or</br>playlist just for your mood</br>your in with our easy tag</br>system. Find songs by</br>their specific qualities</br>wether it be the BPM,</br>Tempre, or dancability.</p>
-        </div>
-        <div class="box a">
-            <h3 class="mobile">See the meat</br>and bones.</h3>
-            <p class="mobile">Analyze any song</br>you like to find</br>out its unique</br>qualities, wether</br>your a DJ looking</br>to create a</br>harmonic mix or</br>a singer looking</br>for a song to sing</br>in a specific key</br>all of the data is</br>made available.</p>
-            <h3 class="tablet">See the meat and</br>bones.</h3>
-            <p class="tablet">Analyze any song you like</br>to find out its unique</br>qualities, wether your a DJ</br>looking to create a</br>harmonic mix or a singer</br>looking for a song to sing</br>in a specific key all of the</br>data is made available.</p>
-        </div>
-        <div class="box a">
-            <h3 class="mobile">Share with</br>friends :)</h3>
-            <p class="mobile">Have the ability</br>to share songs</br>and playlist with</br>friends and the</br>Symphinity</br>community.</br>Earn a plaque</br>on your profile</br>showing how</br>much of a</br>tastemaker you</br>are.</p>
-            <h3 class="tablet">Share with friends :)</h3>
-            <p class="tablet">Have the ability to share</br>songs and playlist with</br>friends and the</br>Symphinity community.</br>Earn a plaque on your</br>profile showing how</br>much of a tastemaker you</br>are.</p>
-        </div>
+    <div id="particles-js"></div>
+    <div id="box">
+        <div class="box1 onlywide animated bounceOutLeft" style="animation-delay:1.7s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutLeft" style="animation-delay:1.9s;"></div>
+        <div class="box2 animated bounceOutRight" style="animation-delay:1.9s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.8s;"></div>
+        <div class="box2 onlywide animated bounceOutRight" style="animation-delay:1.7s;"></div>
     </div>
-</div>
-
-<script>
-
-
-  var checkbox = document.getElementById('switch');
-
-    
-
-    checkbox.addEventListener('click', function() {
-        if(this.checked) {
-            trans()
-            document.documentElement.setAttribute('data-theme', 'light')
-            unshow()
-
-        } else {
-            trans()
-            document.documentElement.setAttribute('data-theme', 'dark')
-            show()
-        }
-    })
-
-    let trans = () => {
-            document.documentElement.classList.add('transition');
-            window.setTimeout(() => {
-                document.documentElement.classList.remove('transition')
-            }, 1000)
-        }
-
-        let unshow = () => {
-            document.getElementById('whitelogo').style.display = "none";
-            document.getElementById('blacklogo').style.display = "inherit";
-            }
-
-        let show = () => {
-        document.getElementById('blacklogo').style.display = "none";
-        document.getElementById('whitelogo').style.display = "inherit";
-        }
-
-
-    
-
-    
-
-</script>
-   
+    <a id="about" onclick="showabout()" class="animated fadeIn" style="animation-delay:2.2s;">about</a>
+    <a id="work" onclick="showwork()" class="animated fadeIn" style="animation-delay:2.2s;">work</a>
+    <a id="contact" onclick="showcontact()" class="animated fadeIn" style="animation-delay:2.2s;">contact</a>
+    <div id="middle" class="animated slideInDown" style="animation-delay:2.0s;">
+        <h1>yourname.</h1>
+        <h2>Software Developer / Photographer / Human</h2>
+        <div id="menu">
+            <a onclick="showabout()">about</a>
+            <a onclick="showwork()">work</a>
+            <a onclick="showcontact()">contact</a>
+        </div>
+        <table>
+                <tr>
+                    <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social"><i class="fab fa-facebook"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social"><i class="fab fa-twitter"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social"><i class="fab fa-instagram"></i></a></td>
+                    <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social"><i class="fab fa-dribbble"></i></a></td>
+                </tr>
+        </table>
+    </div>
+    <div id="work_container" class="container">
+        <div onclick="closework()"><i class="fas fa-angle-right"></i></div>
+        <h1>works.</h1>
+        <section>
+            <h2>work title</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div id="used">
+                <div><i class="fas fa-circle"></i>&nbsp;HTML5</div>
+                <div><i class="fas fa-circle"></i>&nbsp;CSS3</div>
+                <div><i class="fas fa-circle"></i>&nbsp;Javascript</div>
+            </div>
+            <button class="btn_one">button 1</button>
+            <button class="btn_two">button 2</button>
+        </section>
+    </div>
+    <div id="about_container" class="container">
+            <div onclick="closeabout()"><i class="fas fa-angle-left"></i></div>
+            <h1>about.</h1>
+            <section>
+                <h2>about me</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+            </section>
+            <section>
+                <h2>skills</h2>
+                <p>
+                    i do eveything ;)
+                </p>
+            </section>
+        </div>
+          <div id="contact_container" class="container">
+            <div onclick="closecontact()"><i class="fas fa-angle-down"></i></div>
+            <h1>contact.</h1>
+            <section>
+                <h2>contact me</h2>
+                <p>
+                    <form>
+                        <input type="text" placeholder="name" required>
+                        <input type="email" placeholder="email" required><br>
+                        <textarea placeholder="your message" required rows="5"></textarea><br>
+                        <button class="btn_one">send</button>
+                    </form> 
+                </p>
+            </section>
+        </div>
+        <div id="footer">
+            made on earth by a human <br> <a href="https://imfunniee.github.io">imfunny</a>
+        </div>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
